@@ -1,7 +1,6 @@
 [DEFAULT]
 banaction = iptables-ipset-proto6
 backend = polling
-ignoreip = 185.24.35.1
 
 [nginx-limit-req]
 enabled = true
