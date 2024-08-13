@@ -1,0 +1,21 @@
+[DEFAULT]
+banaction = iptables-ipset-proto6
+backend = polling
+ignoreip = 185.24.35.1
+
+[nginx-limit-req]
+enabled = true
+filter = nginx-limit-req
+port = http,https
+findtime = 1
+bantime = 600
+maxretry = 5
+logpath = /var/log/nginx/*error.log
+
+[sshd]
+enabled = true
+maxretry = 5
+port = ssh
+logpath = /var/log/nginx/*error.log
+action = firewallcmd-ipset
+
